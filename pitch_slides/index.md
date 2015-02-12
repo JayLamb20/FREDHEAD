@@ -54,8 +54,8 @@ knit        : slidify::knit2slides
     - Interest Rates (Federal Debt)
     - Home Prices
     - Industrial Production
-    
---- 
+
+---
 
 ## Future Developments
 
@@ -66,3 +66,4 @@ knit        : slidify::knit2slides
 - Have additional suggestions? Questions?
     - LinkedIn: www.linkedin.com/in/jameslamb1
     - email: jaylamb20@gmail.com
+    - GitHub: https://github.com/JayLamb20/FREDHEAD
