@@ -18,7 +18,7 @@ knit        : slidify::knit2slides
 - Basic Idea
     - An interactive dashboard for data from the St. Louis Federal Reserve's FRED &#174; database
     
-<img src="http://raw.githubusercontent.com/JayLamb20/FREDHEAD/gh-pages/pitch_slides/assets/img/screencap1.PNG" height="200" width="900">
+<img src="http://raw.githubusercontent.com/JayLamb20/FREDHEAD/gh-pages/pitch_slides/assets/img/screencap1.PNG" height="500" width="900">
 
 ---
 
