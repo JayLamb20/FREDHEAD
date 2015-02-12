@@ -20,7 +20,7 @@ knit        : slidify::knit2slides
     
 <img src="http://raw.githubusercontent.com/JayLamb20/FREDHEAD/gh-pages/pitch_slides/assets/img/screencap1.PNG" width="900">
 
----
+--- {bg: Lavender}
 
 ## How Does it Work?
 
@@ -41,7 +41,7 @@ knit        : slidify::knit2slides
 - Step 4: Plot a Highcharts time-series line graph of all the series belonging to that main concept.
     - Note that the plot is reactive to the use input, and has nice hover-over data display.
 
---- 
+--- {bg: Lavender}
 
 ## Why Should I Care?
 
@@ -55,7 +55,7 @@ knit        : slidify::knit2slides
     - Home Prices
     - Industrial Production
 
----
+--- {bg: Lavender}
 
 ## Future Developments
 
