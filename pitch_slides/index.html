@@ -13,7 +13,8 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
@@ -42,77 +43,92 @@
 
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:Lavender;">
+  <hgroup>
+    <h2>What is FRED-HEAD?</h2>
+  </hgroup>
   <article data-timings="">
-    <style> .title-slide {
-  background-color: #87CEFA; /* #EDE0CF; ; #CA9F9D*/
-}
-
-.title-slide hgroup > h1{
- font-family: 'Oswald', 'Helvetica', sanserif; 
-}
-
-/* Fonts and Spacing */
-article p, article li, article li.build, section p, section li{
-  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
-  text-align: justify;
-  font-size:22px;
-  line-height: 1.5em;
-  color: #2F4F4F;
-}
-
-.title-slide hgroup > h1, 
-.title-slide hgroup > h2 {
-  color: #2F4F4F ;  /* ; #EF5150*/
-}  </style>
-
-<h3><strong>What is FRED-HEAD?</strong></h3>
-
-<ul>
+    <ul>
 <li>Basic Idea
 
 <ul>
 <li>An interactive dashboard for data from the St. Louis Federal Reserve&#39;s FRED &#174; database</li>
-<li>a simplified version (less data series) is presented below</li>
+</ul></li>
+</ul>
+
+<p><img src=".\\assets\\img\\screencap1.png" height="400" width="900"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How Does it Work?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Step 1: Fetch data from FRED &#174; databse
+
+<ul>
+<li>This step uses the <em>getSymbols()</em> function in the <code>quantmod</code> package</li>
+</ul></li>
+<li>Step 2: Create &quot;long&quot; dataset, date in POSIXct*1000 (<a href="http://bl.ocks.org/ramnathv/9301903">HighCharts from rCharts expects this</a>), and two factors (CONCEPT for graphing, MAINCONCEPT for subsetting)</li>
+</ul>
+
+<pre><code>##             Lev         DATE                 CONCEPT MAINCONCEPT
+## 1990-03-01 5.23 636267600000 Headline CPI (CPIAUCSL)   Inflation
+## 1990-06-01 4.58 644212800000 Headline CPI (CPIAUCSL)   Inflation
+## 1990-09-01 5.56 652161600000 Headline CPI (CPIAUCSL)   Inflation
+## 1990-12-01 6.28 660027600000 Headline CPI (CPIAUCSL)   Inflation
+## 1991-03-01 5.26 667803600000 Headline CPI (CPIAUCSL)   Inflation
+</code></pre>
+
+<ul>
+<li>Step 3: Take user-defined input for &quot;MAINCONCEPT&quot; from a UI drop-down</li>
+<li>Step 4: Plot a Highcharts time-series line graph of all the series belonging to that main concept.
+
+<ul>
+<li>Note that the plot is reactive to the use input, and has nice hover-over data display.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Why Should I Care?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>FRED-HEAD offers a simple solution for viewing the most recent macroeconomic indicators from the St. Louis Federal Reserve&#39;s <a href="http://research.stlouisfed.org/">FRED database</a></li>
+<li>FRED&#39;s built-in <a href="http://research.stlouisfed.org/fred2/graph/?utm_source=research&amp;utm_medium=website&amp;utm_campaign=data-tools">visualization tools</a> are great, but setting up your own multiseries graphs on their site takes a bit of effort</li>
+<li>This application offers easy, interactive access to the newest FRED data.</li>
+<li>Current FRED-HEAD offering:
+
+<ul>
+<li>Inflation</li>
+<li>Unemployment</li>
+<li>Interest Rates (Federal Debt)</li>
+<li>Home Prices</li>
+<li>Industrial Production</li>
 </ul></li>
 </ul>
 
 <hr>
 
-<h3><strong>How Does it Work?</strong></h3>
+<h2>Future Developments</h2>
 
 <ul>
-<li>asdasdflkjadsf</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-2" style="background:Lavender;">
-  <hgroup>
-    <h3><strong>Why Should I care?</strong></h3>
-  </hgroup>
-  <article data-timings="">
-    <p>asdfasdf</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-3" style="background:Lavender;">
-  <hgroup>
-    <h3><strong>Future Developments</strong></h3>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li><p>I would very much like to continue developing this app even after the Developing Data Products course ends. A few potential ideas for improvement:</p>
+<li>I would very much like to continue developing this app even after the Developing Data Products course ends. A few potential ideas for improvement:
 
 <ul>
 <li>Add a &quot;download data&quot; page with reactive table output and ability to download datasets in csv format</li>
 <li>Create a page with streaming Federal Reserve content (Twitter, videos of governor speeches, relevant news)</li>
 <li>Add a page for FRED&#39;s state-level data using some of the more interesting features in rCharts and googleVis, like mapping and motion charts</li>
 </ul></li>
-<li><p>Have additional suggestions? Questions?</p>
+<li>Have additional suggestions? Questions?
 
 <ul>
 <li>LinkedIn: <a href="http://www.linkedin.com/in/jameslamb1">www.linkedin.com/in/jameslamb1</a></li>
@@ -124,40 +140,26 @@ article p, article li, article li.build, section p, section li{
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="dillinger" style="background:;">
-  <article data-timings="">
-    <iframe src = 'http://dillinger.io' height='600px'></iframe>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title=''>
+        data-slide=1 title='What is FRED-HEAD?'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='<strong>Why Should I care?</strong>'>
+        data-slide=2 title='How Does it Work?'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='<strong>Future Developments</strong>'>
+        data-slide=3 title='Why Should I Care?'>
          3
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title=''>
-         4
       </a>
     </li>
   </ul>
@@ -169,7 +171,15 @@ article p, article li, article li.build, section p, section li{
   <![endif]-->
 </body>
   <!-- Load Javascripts for Widgets -->
-  
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
   <!-- LOAD HIGHLIGHTER JS FILES -->
   <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>

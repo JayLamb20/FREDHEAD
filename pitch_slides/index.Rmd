@@ -6,67 +6,61 @@ job         :
 framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [bootstrap]            # {mathjax, quiz}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 --- 
+
 {bg: Lavender}
- 
-<style> .title-slide {
-  background-color: #87CEFA; /* #EDE0CF; ; #CA9F9D*/
-}
 
-.title-slide hgroup > h1{
- font-family: 'Oswald', 'Helvetica', sanserif; 
-}
-
-/* Fonts and Spacing */
-article p, article li, article li.build, section p, section li{
-  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
-  text-align: justify;
-  font-size:22px;
-  line-height: 1.5em;
-  color: #2F4F4F;
-}
-
-.title-slide hgroup > h1, 
-.title-slide hgroup > h2 {
-  color: #2F4F4F ;  /* ; #EF5150*/
-}  </style>
-
-### **What is FRED-HEAD?**
+## What is FRED-HEAD?
 
 - Basic Idea
     - An interactive dashboard for data from the St. Louis Federal Reserve's FRED &#174; database
-    - a simplified version (less data series) is presented below
     
+<img src=".\\assets\\img\\screencap1.png" height="400" width="900">
+
 ---
 
-### **How Does it Work?**
+## How Does it Work?
 
-- asdasdflkjadsf
+- Step 1: Fetch data from FRED &#174; databse
+    - This step uses the *getSymbols()* function in the ```quantmod``` package
+- Step 2: Create "long" dataset, date in POSIXct*1000 ([HighCharts from rCharts expects this](http://bl.ocks.org/ramnathv/9301903)), and two factors (CONCEPT for graphing, MAINCONCEPT for subsetting)
 
---- {bg: Lavender}
+```{r getdata, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+## load the data
+load(".\\..\\freddata.rda")
 
-### **Why Should I care?**
+## give a preview
+head(freddata,n=5)
+```
+- Step 3: Take user-defined input for "MAINCONCEPT" from a UI drop-down
+- Step 4: Plot a Highcharts time-series line graph of all the series belonging to that main concept.
+    - Note that the plot is reactive to the use input, and has nice hover-over data display.
 
-asdfasdf
+--- 
 
---- {bg: Lavender}
+## Why Should I Care?
 
-### **Future Developments**
+- FRED-HEAD offers a simple solution for viewing the most recent macroeconomic indicators from the St. Louis Federal Reserve's [FRED database](http://research.stlouisfed.org/)
+- FRED's built-in [visualization tools](http://research.stlouisfed.org/fred2/graph/?utm_source=research&utm_medium=website&utm_campaign=data-tools) are great, but setting up your own multiseries graphs on their site takes a bit of effort
+- This application offers easy, interactive access to the newest FRED data.
+- Current FRED-HEAD offering:
+    - Inflation
+    - Unemployment
+    - Interest Rates (Federal Debt)
+    - Home Prices
+    - Industrial Production
+    
+--- 
+
+## Future Developments
 
 - I would very much like to continue developing this app even after the Developing Data Products course ends. A few potential ideas for improvement:
     - Add a "download data" page with reactive table output and ability to download datasets in csv format
     - Create a page with streaming Federal Reserve content (Twitter, videos of governor speeches, relevant news)
     - Add a page for FRED's state-level data using some of the more interesting features in rCharts and googleVis, like mapping and motion charts
-    
 - Have additional suggestions? Questions?
     - LinkedIn: www.linkedin.com/in/jameslamb1
     - email: jaylamb20@gmail.com
-
---- #dillinger
-
-<iframe src = 'http://dillinger.io' height='600px'></iframe>
-
-
