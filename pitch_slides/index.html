@@ -1,41 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<title>FRED-HEAD</title>
-	<meta name="description" content="FRED-HEAD">
-	<meta name="author" content="James Lamb">
-	<meta name="generator" content="slidify" />
-	
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
-	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  <title>FRED-HEAD</title>
+  <meta charset="utf-8">
+  <meta name="description" content="FRED-HEAD">
+  <meta name="author" content="James Lamb">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
   
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
 </head>
-<body style='display: none'>
-	<section class='slides layout-regular template-regular'>
-     <article class="" id="slide-1" style="background:;">
-  <h3>What is FRED-HEAD?</h3>
-  <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>FRED-HEAD</h1>
+    <h2>A Simple Dashboard for St. Louis Federal Reserve Data</h2>
+    <p>James Lamb<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
 
-</article>
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:Lavender;">
+  <article data-timings="">
+    <style> .title-slide {
+  background-color: #87CEFA; /* #EDE0CF; ; #CA9F9D*/
+}
 
-<article class="class" id="id" style="background:;">
-  <h3>Slide 2</h3>
-  
-</article>
+.title-slide hgroup > h1{
+ font-family: 'Oswald', 'Helvetica', sanserif; 
+}
 
-  </section>
+/* Fonts and Spacing */
+article p, article li, article li.build, section p, section li{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  text-align: justify;
+  font-size:22px;
+  line-height: 1.5em;
+  color: #2F4F4F;
+}
+
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  color: #2F4F4F ;  /* ; #EF5150*/
+}  </style>
+
+<h2>What is FRED-HEAD?</h2>
+
+<ul>
+<li>Basic Idea
+
+<ul>
+<li>An interactive dashboard for data from the St. Louis Federal Reserve&#39;s FRED &#174; database</li>
+<li>a simplified version (less data series) is presented below</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:Lavender;">
+  <hgroup>
+    <h2>Slide 2</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Slide 2'>
+         2
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-  <!-- LOAD JAVASCRIPTS  -->
-	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
-	<!-- LOAD HIGHLIGHTER JS FILES -->
-	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
-	 
-	</html>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

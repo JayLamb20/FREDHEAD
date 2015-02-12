@@ -1,4 +1,4 @@
-# FREDHEAD
+# FRED-HEAD
 A Simple Dashboard for St. Louis FED Data
 
 ## Using the App

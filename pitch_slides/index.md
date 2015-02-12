@@ -3,21 +3,47 @@ title       : FRED-HEAD
 subtitle    : A Simple Dashboard for St. Louis Federal Reserve Data
 author      : James Lamb
 job         : 
-framework   : html5slides   # {io2012, html5slides, shower, dzslides, ...}
+framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
----
+--- 
+{bg: Lavender}
+ 
+<style> .title-slide {
+  background-color: #87CEFA; /* #EDE0CF; ; #CA9F9D*/
+}
+
+.title-slide hgroup > h1{
+ font-family: 'Oswald', 'Helvetica', sanserif; 
+}
+
+/* Fonts and Spacing */
+article p, article li, article li.build, section p, section li{
+  font-family: 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  text-align: justify;
+  font-size:22px;
+  line-height: 1.5em;
+  color: #2F4F4F;
+}
+
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  color: #2F4F4F ;  /* ; #EF5150*/
+}  </style>
 
 ## What is FRED-HEAD?
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+- Basic Idea
+    - An interactive dashboard for data from the St. Louis Federal Reserve's FRED &#174; database
+    - a simplified version (less data series) is presented below
+    
 
---- .class #id 
+
+
+--- {bg: Lavender}
 
 ## Slide 2
 
