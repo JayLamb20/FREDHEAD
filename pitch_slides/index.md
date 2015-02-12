@@ -34,19 +34,39 @@ article p, article li, article li.build, section p, section li{
   color: #2F4F4F ;  /* ; #EF5150*/
 }  </style>
 
-## What is FRED-HEAD?
+### **What is FRED-HEAD?**
 
 - Basic Idea
     - An interactive dashboard for data from the St. Louis Federal Reserve's FRED &#174; database
     - a simplified version (less data series) is presented below
     
+---
 
+### **How Does it Work?**
 
+- asdasdflkjadsf
 
 --- {bg: Lavender}
 
-## Slide 2
+### **Why Should I care?**
 
+asdfasdf
 
+--- {bg: Lavender}
+
+### **Future Developments**
+
+- I would very much like to continue developing this app even after the Developing Data Products course ends. A few potential ideas for improvement:
+    - Add a "download data" page with reactive table output and ability to download datasets in csv format
+    - Create a page with streaming Federal Reserve content (Twitter, videos of governor speeches, relevant news)
+    - Add a page for FRED's state-level data using some of the more interesting features in rCharts and googleVis, like mapping and motion charts
+    
+- Have additional suggestions? Questions?
+    - LinkedIn: www.linkedin.com/in/jameslamb1
+    - email: jaylamb20@gmail.com
+
+--- #dillinger
+
+<iframe src = 'http://dillinger.io' height='600px'></iframe>
 
 
