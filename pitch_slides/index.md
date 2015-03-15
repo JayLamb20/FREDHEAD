@@ -28,6 +28,19 @@ knit        : slidify::knit2slides
     - This step uses the *getSymbols()* function in the ```quantmod``` package
 - Step 2: Create "long" dataset, date in POSIXct*1000 ([HighCharts from rCharts expects this](http://bl.ocks.org/ramnathv/9301903)), and two factors (CONCEPT for graphing, MAINCONCEPT for subsetting)
 
+
+```
+##             Lev         DATE                 CONCEPT MAINCONCEPT
+## 1990-03-01 5.23 636267600000 Headline CPI (CPIAUCSL)   Inflation
+## 1990-06-01 4.58 644212800000 Headline CPI (CPIAUCSL)   Inflation
+## 1990-09-01 5.56 652161600000 Headline CPI (CPIAUCSL)   Inflation
+## 1990-12-01 6.28 660027600000 Headline CPI (CPIAUCSL)   Inflation
+## 1991-03-01 5.26 667803600000 Headline CPI (CPIAUCSL)   Inflation
+```
+- Step 3: Take user-defined input for "MAINCONCEPT" from a UI drop-down
+- Step 4: Plot a Highcharts time-series line graph of all the series belonging to that main concept.
+    - Note that the plot is reactive to the use input, and has nice hover-over data display.
+
 --- {bg: Lavender}
 
 ## Why Should I Care?
