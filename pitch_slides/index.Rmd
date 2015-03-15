@@ -18,9 +18,9 @@ knit        : slidify::knit2slides
 - Basic Idea
     - An interactive dashboard for data from the St. Louis Federal Reserve's FRED &#174; database
     
-<img src=".\\assets\\img\\screencap1.png" height="400" width="900">
+<img src="http://s9.postimg.org/wfflbyhxr/screencap1.png" width="900">
 
----
+--- {bg: Lavender}
 
 ## How Does it Work?
 
@@ -39,7 +39,7 @@ head(freddata,n=5)
 - Step 4: Plot a Highcharts time-series line graph of all the series belonging to that main concept.
     - Note that the plot is reactive to the use input, and has nice hover-over data display.
 
---- 
+--- {bg: Lavender}
 
 ## Why Should I Care?
 
@@ -52,8 +52,8 @@ head(freddata,n=5)
     - Interest Rates (Federal Debt)
     - Home Prices
     - Industrial Production
-    
---- 
+
+--- {bg: Lavender}
 
 ## Future Developments
 
@@ -64,3 +64,4 @@ head(freddata,n=5)
 - Have additional suggestions? Questions?
     - LinkedIn: www.linkedin.com/in/jameslamb1
     - email: jaylamb20@gmail.com
+    - GitHub: https://github.com/JayLamb20/FREDHEAD

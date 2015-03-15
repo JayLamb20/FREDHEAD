@@ -18,7 +18,7 @@ When you navigate to the application, it should open on the "Plot" page. This pa
 4. That's it!
 
 <h4>Documentation</h4>
-This page (which you are already on!) contains this simple set of instructions for using the app. In addition, the underlying code are provided for your reference. To inspect all of the raw files underlying this application, please visit [the accompanying GitHub repo](NEED LINK).
+This page (which you are already on!) contains this simple set of instructions for using the app. In addition, the underlying code are provided for your reference. To inspect all of the raw files underlying this application, please visit [the accompanying GitHub repo](https://github.com/JayLamb20/FREDHEAD).
 
 <h4>Additional Resources</h4>
 

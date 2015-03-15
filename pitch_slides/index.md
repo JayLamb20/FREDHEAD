@@ -18,9 +18,9 @@ knit        : slidify::knit2slides
 - Basic Idea
     - An interactive dashboard for data from the St. Louis Federal Reserve's FRED &#174; database
     
-<img src=".\\assets\\img\\screencap1.png" height="400" width="900">
+<img src="http://s9.postimg.org/wfflbyhxr/screencap1.png" width="900">
 
----
+--- {bg: Lavender}
 
 ## How Does it Work?
 
@@ -28,5 +28,29 @@ knit        : slidify::knit2slides
     - This step uses the *getSymbols()* function in the ```quantmod``` package
 - Step 2: Create "long" dataset, date in POSIXct*1000 ([HighCharts from rCharts expects this](http://bl.ocks.org/ramnathv/9301903)), and two factors (CONCEPT for graphing, MAINCONCEPT for subsetting)
 
+--- {bg: Lavender}
 
+## Why Should I Care?
 
+- FRED-HEAD offers a simple solution for viewing the most recent macroeconomic indicators from the St. Louis Federal Reserve's [FRED database](http://research.stlouisfed.org/)
+- FRED's built-in [visualization tools](http://research.stlouisfed.org/fred2/graph/?utm_source=research&utm_medium=website&utm_campaign=data-tools) are great, but setting up your own multiseries graphs on their site takes a bit of effort
+- This application offers easy, interactive access to the newest FRED data.
+- Current FRED-HEAD offering:
+    - Inflation
+    - Unemployment
+    - Interest Rates (Federal Debt)
+    - Home Prices
+    - Industrial Production
+
+--- {bg: Lavender}
+
+## Future Developments
+
+- I would very much like to continue developing this app even after the Developing Data Products course ends. A few potential ideas for improvement:
+    - Add a "download data" page with reactive table output and ability to download datasets in csv format
+    - Create a page with streaming Federal Reserve content (Twitter, videos of governor speeches, relevant news)
+    - Add a page for FRED's state-level data using some of the more interesting features in rCharts and googleVis, like mapping and motion charts
+- Have additional suggestions? Questions?
+    - LinkedIn: www.linkedin.com/in/jameslamb1
+    - email: jaylamb20@gmail.com
+    - GitHub: https://github.com/JayLamb20/FREDHEAD
